@@ -1,0 +1,307 @@
+/* Global Values Start */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root {
+    --green:#50C878;
+    --medium-green:#37b037;
+    --dark-green:#02794f;
+    --blue-green:#088F8F;
+    --transparent-black: rgba(0, 0, 0, 0.8);
+    --padding: 100px 0;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(224, 224, 224);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu {
+    width: 7%;
+    display: none;
+}
+
+.menu svg {
+    width: 100%;
+    fill: white;
+}
+
+.links {
+    display: block;
+}
+
+/* Global Values End */
+
+/* Nav Start */
+
+nav {
+    padding: 25px 0;
+    background-color: var(--green);
+    color: white;
+}
+
+.logo p {
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+
+    nav .container {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+
+    nav {
+        position: relative;
+    }
+
+    nav .links {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: var(--transparent-black);
+        width: 100%;
+        transition: .2s;
+        z-index: 5;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 0;
+        direction: rtl;
+    }
+
+    ul a {
+        padding: 10px 10%;
+        border: 1px solid black;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .logo p {
+        font-family: 'Satisfy', cursive;
+        font-size: 20px;
+    }
+
+}
+
+/* Nav End */
+
+/* Hero Start */
+
+.hero-section {
+    width: 100%;
+    margin: auto;
+}
+
+.hero-section .container {
+    width: 100%;
+}
+
+.hero-section img {
+    width: 100%;
+    position: relative;
+}
+
+.hero-section .image {
+    width: 100%;
+    position: relative;
+}
+
+.hero-section .image .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: calc(100% - 8px);
+    z-index: 2;
+}
+
+.hero-section .image .overlay .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    width: 100%;
+}
+
+.hero-section .image .overlay .text h1 {
+    margin-bottom: 100px;
+    font-size: 40px;
+}
+
+.hero-section .image .overlay .text input {
+    width: 500px;
+    height: 50px;
+    padding: 5px;
+    direction: rtl;
+}
+
+@media screen and (max-width: 426px) {
+
+    .hero-section .image .overlay .text h1 {
+        margin-bottom: 50px;
+        font-size: 30px;
+    }
+    
+    .hero-section .image .overlay .text input {
+        width: 250px;
+        height: 25px;
+        padding: 5px;
+        direction: rtl;
+    }
+
+    .hero-section img {
+        height: 400px;
+    }
+
+}
+
+/* Hero End */
+
+/* Main Start */
+
+.main-section {
+    padding: var(--padding);
+}
+
+.main-section .container {
+    flex-direction: column;
+}
+
+.main-section .container .food-section {
+    margin: 50px 0;
+}
+
+.main-section .container .food-section .title {
+    margin-bottom: 50px;
+}
+
+.main-section .container .dishes {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.main-section .container .dish {
+    width: 18%;
+    background-color: #E5E6E4;
+}
+
+.main-section .container .dish .image img {
+    width: 100%;
+}
+
+.main-section .container .dish .dish-name {
+    text-align: center;
+    margin: 25px 0;
+}
+
+.main-section .container .dish .dish-button {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+
+.main-section .container .dish .dish-button button {
+    padding: 7px 30px;
+    margin: 25px 0;
+    text-align: center;
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    background-color: var(--medium-green);
+}
+
+.main-section .container .dish .dish-button button:hover {
+    background-color: var(--dark-green);
+    transition: 0.5s;
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+    
+    .main-section {
+        width: 100%;
+        padding: 100px 0;
+    }
+
+    .main-section .container {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+
+    .main-section .container {
+        text-align: center;
+        width: 80%;
+    }
+
+    .main-section .container .dishes {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .main-section .container .dishes .dish {
+        width: 100%;
+        margin: 25px 0;
+    }
+
+}
+
+/* Main End */
+
+/* Footer Start */
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    background-color: var(--green);
+}
+
+footer .container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer End */

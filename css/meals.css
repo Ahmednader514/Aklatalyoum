@@ -1,0 +1,244 @@
+/* Global Values Start */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root {
+    --green:#50C878;
+    --medium-green:#37b037;
+    --dark-green:#02794f;
+    --blue-green:#088F8F;
+    --gray: #E5E4E2;
+    --transparent-black: rgba(0, 0, 0, 0.8);
+    --padding: 100px 0;
+}
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(224, 224, 224);
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu {
+    width: 7%;
+    display: none;
+}
+
+.menu svg {
+    width: 100%;
+    fill: white;
+}
+
+.links {
+    display: block;
+}
+
+/* Global Values End */
+
+/* Nav Start */
+
+nav {
+    padding: 25px 0;
+    background-color: var(--green);
+    color: white;
+}
+
+.logo p {
+    font-family: 'Satisfy', cursive;
+    font-size: 25px;
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+
+    nav .container {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+
+    nav {
+        position: relative;
+    }
+
+    nav .links {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: var(--transparent-black);
+        width: 100%;
+        transition: .2s;
+        z-index: 5;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 0;
+        direction: rtl;
+    }
+
+    ul a {
+        padding: 10px 10%;
+        border: 1px solid black;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .logo p {
+        font-family: 'Satisfy', cursive;
+        font-size: 20px;
+    }
+
+}
+
+/* Nav End */
+
+/* Main Start */
+
+.main-section {
+    padding: var(--padding);
+}
+
+.main-section .container {
+    align-items: stretch;
+    text-align: center;
+}
+
+.main-section .container .left {
+    width: 80%;
+    background-color: var(--gray);
+}
+
+.main-section .container .left .image img {
+    width: 100%;
+}
+
+.main-section .container .left .text h1 {
+    font-size: 2em;
+    margin: 50px 0;
+}
+
+.main-section .container .left .text .ingrediants {
+    margin: 50px 0;
+}
+
+.main-section .container .left .text .ingrediants h2 {
+    margin: 25px;
+}
+
+.main-section .container .left .text .prepare {
+    margin: 50px 0;
+}
+
+.main-section .container .left .text .prepare .h2 {
+    margin: 25px 0;
+}
+
+.main-section .container .left .text .prepare .video {
+    margin: 25px auto;
+    width: 80%;
+}
+
+.main-section .container .left .text .prepare .video iframe {
+    width: 100%;
+    margin: auto;
+}
+
+.main-section .container .right {
+    background-color: var(--gray);
+    width: 15%;
+}
+
+.main-section .container .right .links {
+    height: 15%;
+}
+
+.main-section .container .right .links h3 {
+    margin: 25px 0;
+}
+
+.main-section .container .right .ads {
+    width: 100%;
+    height: 85%;
+}
+
+@media screen and (min-width: 426px) and (max-width: 769px) {
+
+    .main-section .container {
+        width: 90%;
+    }
+
+    .main-section .container .right .links {
+        height: 20%;
+    }
+
+    .main-section .container .right .ads {
+        height: 80%;
+    }
+
+}
+
+@media screen and (max-width: 426px) {
+
+    .main-section .container .right {
+        display: none;
+    }
+
+    .main-section .container {
+        flex-direction:  column;
+        width: 90%;
+    }
+
+    .main-section .container .left {
+        width: 100%;
+    }
+
+}
+
+/* Main End */
+
+/* Footer Start */
+
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: white;
+    background-color: var(--green);
+}
+
+footer .container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+/* Footer End */
