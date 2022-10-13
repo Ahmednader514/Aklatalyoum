@@ -83,7 +83,7 @@ nav .container {
     top: 0;
     left: 0;
     width: 50px;
-    transform: scale(2.5);
+    transform: scale(1.5);
 }
 
 @media screen and (min-width: 426px) and (max-width: 769px) {
@@ -134,7 +134,7 @@ nav .container {
         width: 50px;
         top: 0;
         text-align: center;
-        transform: scale(2);
+        transform: scale(1.5);
     }
 
 }
